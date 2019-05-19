@@ -24,7 +24,8 @@ func tryDeferWithLoop() {
 }
 
 func writeFile(filename string) {
-	file, err := os.OpenFile(filename, os.O_EXCL|os.O_CREATE, 0666)
+	// file, err := os.OpenFile(filename, os.O_EXCL|os.O_CREATE, 0666)
+	file, err := os.Create(filename)
 	if err != nil {
 		if pathError, success := err.(*os.PathError); !success {
 			panic(err)
