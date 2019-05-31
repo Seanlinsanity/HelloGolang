@@ -35,7 +35,7 @@ func printFileContents(reader io.Reader) {
 }
 
 func main() {
-	f := fib.Fibonacci()
+	var f intGenerator = fib.Fibonacci()
 	printFileContents(f)
 
 	// fmt.Println(f())
