@@ -17,7 +17,7 @@ func tryDefer() {
 func tryDeferWithLoop() {
 	for i := 0; i < 100; i++ {
 		defer fmt.Println(i)
-		if i == 30 {
+		if i == 20 {
 			panic("panic and stop")
 		}
 	}
@@ -47,5 +47,5 @@ func writeFile(filename string) {
 
 func main() {
 	writeFile("fibonacci.txt")
-	// tryDeferWithLoop()
+	tryDeferWithLoop()
 }
