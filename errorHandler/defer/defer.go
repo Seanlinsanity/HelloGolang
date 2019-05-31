@@ -17,7 +17,7 @@ func tryDefer() {
 func tryDeferWithLoop() {
 	for i := 0; i < 100; i++ {
 		defer fmt.Println(i)
-		if i == 20 {
+		if i == 30 {
 			panic("panic and stop")
 		}
 	}
